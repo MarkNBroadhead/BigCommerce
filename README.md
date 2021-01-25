@@ -9,5 +9,20 @@ To customize the PrintableDetailedInvoice.html and PrintableInvoice.html files, 
 2. Server Settings
 3. File Access (WebDav)
 
+## Upload template to site
+To upload using linux util Cadaver
+* Create ~/.netrc file, replacing values in ${} with actual values.  
+  ```
+  machine ${hostname}
+  login ${username}
+  password ${password}
+  ```
+* `cadaver ${webDavPath}` webdav path example: https://store-saklfj13423.mybigcommerce.com/dav
+* `cd template`
+* Backup existing templates `mget *` NOTE: Enter filenames for backups or your files will be overwritten.
+* `put PrintableInvoice.html`
+
+
+
 # API Credentials
 To get API credentials, go to your Dashboard, Advanced Settings, API Accounts, then create an API account.
